@@ -2,26 +2,27 @@ package com.atguigu.mybatisplus.pojo;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
-
-import java.io.Serializable;
+import lombok.experimental.Accessors;
 
 /**
  * 
  * @TableName user
  */
-@TableName(value ="user")
+@TableName(value ="t_user")
 @Data
+@Accessors(chain = true)
 public class User{
     /**
      * 主键ID
      */
-    @TableId(type = IdType.AUTO)
+    @TableId(value = "uid",type = IdType.AUTO)
     private Long id;
 
     /**
      * 姓名
      */
-    private String name;
+    @TableField("user_name")
+    private String userName;
 
     /**
      * 年龄

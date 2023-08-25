@@ -30,7 +30,7 @@ public class MyBatisPlusServiceTest {
         ArrayList<User> list = new ArrayList<>();
         for (int i = 1; i <= 5 ; i++) {
             User user = new User();
-            user.setName("cxk"+i);
+            user.setUserName("cxk"+i);
             user.setAge(20 + i);
             list.add(user);
         }

@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -33,7 +32,7 @@ public class MyBatisPlusTest {
         //实现用户新增
         // INSERT INTO user ( name, age, email ) VALUES ( ?, ?, ? )
         User user = new User();
-        user.setName("zhang3");
+        user.setUserName("zhang3");
         user.setAge(45);
         user.setEmail("zhang3@qq.com");
         int result = userMapper.insert(user);
@@ -52,7 +51,7 @@ public class MyBatisPlusTest {
 
         //UPDATE user SET is_deleted=1 WHERE name = ? AND age = ? AND is_deleted=0
         HashMap<String, Object> map = new HashMap<>();
-        map.put("name","zhang3");
+        map.put("user_name","zhang3");
         map.put("age",45);
         int result = userMapper.deleteByMap(map);
 
@@ -67,7 +66,7 @@ public class MyBatisPlusTest {
         //修改用户信息
         // UPDATE user SET name=?, age=?, email=? WHERE id=? AND is_deleted=0
         User user = new User();
-        user.setName("lisi");
+        user.setUserName("lisi");
         user.setAge(44);
         user.setEmail("lisi@qq.com");
         user.setId(6L);

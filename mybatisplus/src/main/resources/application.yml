@@ -5,9 +5,9 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     #办公室
-    url: jdbc:mysql://192.168.28.150:3306/mybatis_plus?characterEncoding=utf-8&userSSL=false
-    #家庭
 #    url: jdbc:mysql://192.168.28.150:3306/mybatis_plus?characterEncoding=utf-8&userSSL=false
+    #家庭
+    url: jdbc:mysql://10.10.10.160:3306/mybatis_plus?characterEncoding=utf-8&userSSL=false
     username: root
     password: zs123456
 
