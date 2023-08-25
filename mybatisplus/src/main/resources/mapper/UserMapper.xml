@@ -9,10 +9,11 @@
             <result property="name" column="name" jdbcType="VARCHAR"/>
             <result property="age" column="age" jdbcType="INTEGER"/>
             <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="isDeleted" column="is_deleted" jdbcType="INTEGER"/>
     </resultMap>
 
     <sql id="Base_Column_List">
         id,name,age,
-        email
+        email,is_deleted
     </sql>
 </mapper>

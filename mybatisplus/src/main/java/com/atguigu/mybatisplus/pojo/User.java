@@ -1,8 +1,6 @@
 package com.atguigu.mybatisplus.pojo;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -13,11 +11,11 @@ import java.io.Serializable;
  */
 @TableName(value ="user")
 @Data
-public class User implements Serializable {
+public class User{
     /**
      * 主键ID
      */
-    @TableId
+    @TableId(type = IdType.AUTO)
     private Long id;
 
     /**
@@ -35,6 +33,9 @@ public class User implements Serializable {
      */
     private String email;
 
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
+    @TableLogic
+    private Integer isDeleted;
+
+//    @TableField(exist = false)
+//    private static final long serialVersionUID = 1L;
 }
