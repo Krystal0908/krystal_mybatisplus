@@ -1,5 +1,6 @@
 package com.atguigu.mybatisplus.pojo;
 
+import com.atguigu.mybatisplus.enums.SexEnum;
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -29,6 +30,10 @@ public class User{
      */
     private Integer age;
 
+    /**
+     * 性别
+     */
+    private SexEnum sex;
     /**
      * 邮箱
      */

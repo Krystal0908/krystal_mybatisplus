@@ -2,6 +2,7 @@ package com.atguigu.mybatisplus;
 
 import com.atguigu.mybatisplus.mapper.UserMapper;
 import com.atguigu.mybatisplus.pojo.User;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
@@ -172,9 +173,11 @@ public class MyBatisPlusWrapperTest {
     @Test
     public void test14() {
         //将用户名中包含有a并且（年龄大于20或邮箱为null）的用户信息修改
-
-
+        LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.like(User::getUserName, "a")
+                .and(i-> i.ge(User::getAge,20).or().isNull(User::getEmail));
+        userMapper.update(new User().setUserName("a").setAge(23), queryWrapper);
+        System.out.println("update");
     }
-
 
 }
