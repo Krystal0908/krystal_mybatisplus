@@ -11,11 +11,13 @@
 
     <modules>
         <module>mybatisplus</module>
+        <module>mybatisx_demo</module>
+        <module>mybatis_plus_datasource</module>
     </modules>
 
-<!--    <dependencyManagement>
+    <dependencyManagement>
         <dependencies>
-            &lt;!&ndash;springboot版本&ndash;&gt;
+            <!--springboot版本-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
@@ -23,35 +25,42 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            &lt;!&ndash;mybatis-plus启动器&ndash;&gt;
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>2.6.3</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--mybatis-plus启动器-->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis.spring.boot.version}</version>
             </dependency>
-            &lt;!&ndash;lombok&ndash;&gt;
+            <!--lombok-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
                 <optional>true</optional>
             </dependency>
-            &lt;!&ndash;junit&ndash;&gt;
+            <!--junit-->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
             </dependency>
         </dependencies>
-    </dependencyManagement>-->
+    </dependencyManagement>
 
-<!--    <properties>
+    <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <lombok.version>1.16.18</lombok.version>
         <junit.version>4.12</junit.version>
         <mybatis.spring.boot.version>3.5.1</mybatis.spring.boot.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>-->
+    </properties>
 
 </project>
