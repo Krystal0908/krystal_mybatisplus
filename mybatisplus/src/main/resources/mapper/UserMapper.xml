@@ -16,4 +16,7 @@
         uid,user_name,age,
         email,is_deleted
     </sql>
+    <select id="selectPageVo" resultType="com.atguigu.mybatisplus.pojo.User">
+        select <include refid="Base_Column_List"/> from t_user where age > #{age} and is_deleted = 0
+    </select>
 </mapper>
